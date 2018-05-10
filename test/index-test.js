@@ -1,6 +1,5 @@
 describe('Selectors', () => {
- function(getIt) {
-    //binds a click event to the paragraph and returns "Hey!"
+  it('getIt() binds a click event to the paragraph', function() {
     window.alert = expect.createSpy()
 
     window.getIt();
@@ -8,8 +7,6 @@ describe('Selectors', () => {
     window.$('p')[0].click()
 
     expect(window.alert).toHaveBeenCalled();
-    
-    returns("Hey!")
   });
 
   it('frameIt() binds an event that frames the minion when the page loads', function() {
